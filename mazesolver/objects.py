@@ -1,20 +1,16 @@
+
+
 class Point:
     def __init__(self, x, y):
         self.x = x
         self.y = y
     
 class Line:
-    def __init__(self, point_a, point_b):
-        self.point_a = point_a
-        self.point_b = point_b
+    def __init__(self, p1, p2):
+        self.x1 = p1.x
+        self.y1 = p1.y
+        self.x2 = p2.x
+        self.y2 = p2.y
 
     def draw(self, canvas, fill_color):
-        self.canvas = canvas
-        canvas.create_line(self.point_a.x,
-                           self.point_a.y, 
-                           self.point_b.x,
-                           self.point_b.y,
-                           fill = fill_color, 
-                           width = 2
-                           )
-        
+        canvas.create_line(self.x1, self.y1, self.x2, self.y2, fill = fill_color, width = 2)
